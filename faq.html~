@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">  
+    <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="js/cufon-yui.js" type="text/javascript"></script>
+    <script src="js/cufon-replace.js" type="text/javascript"></script> 
+    <script src="js/Dynalight_400.font.js" type="text/javascript"></script>
+    <script src="js/FF-cash.js" type="text/javascript"></script>  
 	<!--[if lt IE 8]>
     <div style=' clear: both; text-align:center; position: relative;'>
         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -82,11 +87,6 @@
             </div>
         </div>
     </footer>
-    <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
-    <script src="js/cufon-yui.js" type="text/javascript"></script>
-    <script src="js/cufon-replace.js" type="text/javascript"></script> 
-    <script src="js/Dynalight_400.font.js" type="text/javascript"></script>
-    <script src="js/FF-cash.js" type="text/javascript"></script>  
     <script type="text/javascript"> Cufon.now(); </script>
 </body>
 </html>
