@@ -71,23 +71,25 @@
                 </article>
                 <article class="col-2">
                 	<h3 class="p1">Contactanos</h3>
-                    <form id="contact-form" method="post" enctype="multipart/form-data">                    
+
+                    <form id="contact-form" method="post" enctype="multipart/form-data" action="php/Contacto.php">
                         <fieldset>
-                              <label><span class="text-form">Nombre:</span><input name="name" type="text" /></label>
-                              <label><span class="text-form">Correo:</span><input name="email" type="text" /></label>                              
+                              <label><span class="text-form">Nombre:</span><input name="nombre" type="text" /></label>
+                              <label><span class="text-form">Correo:</span><input name="email" type="text" /></label>
                               <div class="wrapper">
                                 <div class="text-form">Mensaje:</div>
                                 <div class="extra-wrap">
-                                    <textarea></textarea>
+                                    <textarea name="mensaje"></textarea>
                                     <div class="clear"></div>
                                     <div class="buttons">
                                         <a class="button-2" href="#" onClick="document.getElementById('contact-form').reset()">Limpiar</a>
-                                        <a class="button-2" href="#" onClick="document.getElementById('contact-form').submit()">Enviar</a>
+                                        <input type="submit" class="button-2" value="Enviar">
                                     </div> 
                                 </div>
                               </div>                            
                         </fieldset>						
                     </form>
+
                 </article>
             </div>
         </div>
