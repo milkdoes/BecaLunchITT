@@ -1,116 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Contactanos</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen"> 
-	<!--[if lt IE 8]>
-    <div style=' clear: both; text-align:center; position: relative;'>
-        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-        	<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-        </a>
-    </div>
-	<![endif]-->
-    <!--[if lt IE 9]>
-   		<script type="text/javascript" src="js/html5.js"></script>
-	<![endif]-->
-</head>
-<body id="page6">
-	<!--==============================header=================================-->
-    <header>
-    	<div class="row-top">
-        	<div class="main">
-            	<div class="wrapper">
-                	<h1><a href="index.html">Beca-lunch<span> ITT</span></a></h1>
-                    <nav>
-                        <ul class="menu">
-                            <li><a class="active" href="index.html">Acerca de</a></li>
-                            <li><a href="menu.html">Menu</a></li>
-                            <li><a href="catalogue.html">Catalogo </a></li>                            
-                            <li><a href="faq.html">Preguntas frecuentes </a></li>
-                            <li><a href="contact.html">Contactanos</a></li>
-                         </ul>  
-                         <ul class="menu"> 
-                             <li><a class="active">  CORREO <input type="text" name="CORREO" placeholder="Email" />  CONTRASEÑA  <input type="password" name="CONTRASEÑA" placeholder="Contraseña" />
-        <input type="button" value="INGRESAR" id="boton"  /></a></li>
-                        </ul>
-                    </nav>
-                </div>
+    <head>
+        <title>Contactanos</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
+        <!--[if lt IE 8]>
+            <div style=' clear: both; text-align:center; position: relative;'>
+            <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+            </a>
             </div>
-        </div>
-        <div class="row-bot">
-        	<div class="row-bot-bg">
-            	<div class="main">
-                	<h2>Contac<span>tanos</span></h2>
-                </div>
-            </div>
-        </div>
-    </header>
-    
-	<!--==============================content================================-->
-    <section id="content"><div class="ic"></div>
-        <div class="main">
-            <div class="wrapper">
-            	<article class="col-1">
-                	<div class="indent-left">
-                    	<h3 class="p1">conoce nuestra ubicacion</h3>
-                        <figure class="indent-bot">
-                           
-                            <iframe width="240" height="180" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3363.5304862130606!2d-116.92676068526633!3d32.538684603407496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x81345fbc03ca8a85%3A0x665f58f25aa32bd0!2sInstituto+Tecnologico+de+Tijuana!5e0!3m2!1sen!2sus!4v1461134716722" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                        </figure>
-                        <dl>
-                            <dt class="p1">Tijuana B.C </dt>
-                            
-                            <dd><span>Telefono:</span>  +1 800 603 6035</dd>
-                            
-                            <dd><span>Correo:</span><a class="color-2" href="#">mail@demolink.org</a></dd>
-                        </dl>
+        <![endif]-->
+        <!--[if lt IE 9]>
+            <script type="text/javascript" src="js/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body id="page6">
+        <!--==============================header=================================-->
+        <header>
+            <div id="rowTop"></div>
+            <div class="row-bot">
+                <div class="row-bot-bg">
+                    <div class="main">
+                        <h2>Contac<span>tanos</span></h2>
                     </div>
-                </article>
-                <article class="col-2">
-                	<h3 class="p1">Contactanos</h3>
-
-                    <form id="contact-form" method="post" enctype="multipart/form-data" action="php/Contacto.php">
-                        <fieldset>
-                              <label><span class="text-form">Nombre:</span><input name="nombre" type="text" /></label>
-                              <label><span class="text-form">Correo:</span><input name="email" type="text" /></label>
-                              <div class="wrapper">
-                                <div class="text-form">Mensaje:</div>
-                                <div class="extra-wrap">
-                                    <textarea name="mensaje"></textarea>
-                                    <div class="clear"></div>
-                                    <div class="buttons">
-                                        <a class="button-2" href="#" onClick="document.getElementById('contact-form').reset()">Limpiar</a>
-                                        <input type="submit" class="button-2">Enviar</a>
-                                    </div> 
+                </div>
+            </div>
+        </header>
+        <!--==============================content================================-->
+        <section id="content"><div class="ic"></div>
+            <div class="main">
+                <div class="wrapper">
+                    <article class="col-1">
+                        <div class="indent-left">
+                            <h3 class="p1">conoce nuestra ubicacion</h3>
+                            <figure class="indent-bot">
+                                <iframe width="240" height="180" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3363.5304862130606!2d-116.92676068526633!3d32.538684603407496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x81345fbc03ca8a85%3A0x665f58f25aa32bd0!2sInstituto+Tecnologico+de+Tijuana!5e0!3m2!1sen!2sus!4v1461134716722" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </figure>
+                            <dl>
+                                <dt class="p1">Tijuana B.C </dt>
+                                <dd><span>Telefono:</span>  +1 800 603 6035</dd>
+                                <dd><span>Correo:</span><a class="color-2" href="#">mail@demolink.org</a></dd>
+                            </dl>
+                        </div>
+                    </article>
+                    <article class="col-2">
+                        <h3 class="p1">Contactanos</h3>
+                        <form id="contact-form" method="post" enctype="multipart/form-data" action="php/Contacto.php">
+                            <fieldset>
+                                <label><span class="text-form">Nombre:</span><input name="nombre" type="text" /></label>
+                                <label><span class="text-form">Correo:</span><input name="email" type="text" /></label>
+                                <div class="wrapper">
+                                    <div class="text-form">Mensaje:</div>
+                                    <div class="extra-wrap">
+                                        <textarea name="mensaje"></textarea>
+                                        <div class="clear"></div>
+                                        <div class="buttons">
+                                            <a class="button-2" href="#" onClick="document.getElementById('contact-form').reset()">Limpiar</a>
+                                            <input type="submit" class="button-2" value="Enviar">
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>                            
-                        </fieldset>						
-                    </form>
+                            </fieldset>
+                        </form>
 
-                </article>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
-    
-	<!--==============================footer=================================-->
-    <footer>
-        <div class="main">
-        	<div class="aligncenter">
-            	
-
-
-                
+        </section>
+        <!--==============================footer=================================-->
+        <footer>
+            <div class="main">
+                <div class="aligncenter">
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </body>
     <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/startFunctions.js"></script>
     <script src="js/cufon-yui.js" type="text/javascript"></script>
-    <script src="js/cufon-replace.js" type="text/javascript"></script> 
+    <script src="js/cufon-replace.js" type="text/javascript"></script>
     <script src="js/Dynalight_400.font.js" type="text/javascript"></script>
-    <script src="js/FF-cash.js" type="text/javascript"></script>  
+    <script src="js/FF-cash.js" type="text/javascript"></script>
     <script type="text/javascript"> Cufon.now(); </script>
-</body>
 </html>
