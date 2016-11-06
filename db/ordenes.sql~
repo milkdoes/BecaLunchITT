@@ -1,7 +1,7 @@
-CREATE DATABASE ordenes;
+CREATE DATABASE BecaLunch;
 GO
 
-USE ordenes;
+USE BecaLunch;
 GO
 
 create table platillo
@@ -9,7 +9,7 @@ create table platillo
     id_platillo int,
     nombre varchar(50),
     descripcion varchar(50),
-    estatus varchar(50),
+    estatus bit,
     primary key (id_platillo)
 );
 GO
@@ -21,6 +21,7 @@ create table alumno
     nombre varchar(50),
     apellidop char(50),
     apellidom char(50),
+    estatus bit,
     semestre int,
     periodo varchar(50),
     contador int,
@@ -29,7 +30,7 @@ create table alumno
 );
 GO
 
-create table ordenes
+create table orden
 (
     id_orden int,
     id_becado int,
@@ -69,7 +70,7 @@ create table Bitacora
     id_Bitacora varchar(2),
     fecha date,
     id_becado int,
-    estatus varchar(50),
+    estatus bit,
     primary key (id_Bitacora),
     FOREIGN KEY (id_becado) REFERENCES ordenes(id_becado)
 );
@@ -110,8 +111,9 @@ create table TelefonoE
 GO
 
 create table imagen(
-    id_imagen varchar(50),
+    id_imagen int,
     tipo varchar(50),
-    ruta varchar(50)
+    ruta varchar(50),
+    PRIMARY KEY (id_imagen)
 );
 GO
