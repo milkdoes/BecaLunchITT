@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    $("#rowTop").load("rowTop.html");
+    $("#rowTop").load("rowTop.php");
 });
