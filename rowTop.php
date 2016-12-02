@@ -4,13 +4,12 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
+// Incluir archivo de conexion.
+include_once "php/Conn.php";
+
 // Inicializar variable para el id del usuario conectado.
 $idUsuario = NULL;
 
-// Asignar id del usuario conectado si este se pide o si ya esta puesto como una variable de sesion.
-//if( isset($_REQUEST["IdUsuario"]) && !empty($_REQUEST["IdUsuario"]) ) {
-//    $idUsuario = $_REQUEST["IdUsuario"];
-//} else
 if( isset($_SESSION["IdUsuario"]) && !empty($_SESSION["IdUsuario"]) ) {
     $idUsuario = $_SESSION["IdUsuario"];
 }
@@ -35,20 +34,37 @@ if( isset($_SESSION["IdUsuario"]) && !empty($_SESSION["IdUsuario"]) ) {
 <?php
 // Renderizar de acuerdo a si ya hay sesion activa o no.
 if ($idUsuario != NULL) {
-    echo '<li>USUARIO X EN ESTADO DE LOGIN</a></li>';
+    // Preparar consulta a base de datos.
+    $sql = "SELECT a.nombre, a.no_control, c.correo FROM alumno AS a INNER JOIN CorreoA AS c ON a.id_becado = c.id_becado WHERE a.id_becado = $idUsuario LIMIT 1;";
+    $result = mysqli_query($conn, $sql);
+
+    // Variables para guardar los datos.
+    $nombre = "";
+    $numControl = 0;
+    $correo = "";
+
+    if (mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $nombre = $row["nombre"];
+            $numControl = $row["no_control"];
+            $correo = $row["correo"];
+        }
+    }
+
+    echo "USUARIO $nombre ($numControl) EN ESTADO DE LOGIN
+        CORREO: $correo
+        <input id=\"boton\" type=\"button\" value=\"SALIR\" />"
+        ;
 } else {
     echo
-        '
-        CORREO<input type="text" name="CORREO" placeholder="Email" />
-        CONTRASEÑA<input type="password" name="CONTRASEÑA" placeholder="Contraseña" />
-        <input type="button" value="INGRESAR" id="boton" />
-        '
+        'CORREO<input id="correo" type="text" name="CORREO" placeholder="Email" />
+        CONTRASEÑA<input id="contrasena" type="password" name="CONTRASEÑA" placeholder="Contraseña" />
+        <input id="boton" type="button" value="INGRESAR" />'
         ;
-        }
-
-        ?>
-        </a></li>
-        <!-- <li><a href="index.html">Salir</a></li> -->
+}
+?>
+                        </a></li>
+                        <!-- <li><a href="index.html">Salir</a></li> -->
                 </ul>
             </nav>
         </div>
