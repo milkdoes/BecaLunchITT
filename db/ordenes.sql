@@ -6,8 +6,20 @@ create table platillo(
     id_platillo int auto_increment primary key,
     nombre varchar(50),
     descripcion varchar(50),
-    estatus varchar(50)
+    estatus varchar(50),
+    precio decimal
 );
+
+INSERT INTO `platillo` (`id_platillo`, `nombre`, `descripcion`, `estatus`, `precio`) VALUES
+(1, 'enchiladas', 'ricas enchiladas', 'disponible', '13'),
+(2, 'salchicha mexicana', 'ricas salchicas', 'disponible', '13'),
+(3, 'mole', 'rico mole', 'disponible', '13'),
+(4, 'pozole', 'rico pozole', 'no disponible', '10'),
+(5, 'hamburguesas', 'ricas hamburguesas', 'disponible', '14'),
+(6, 'hotdogs', 'ricos hotdogs', 'no disponible', '20'),
+(7, 'frutas', 'fruta afresca', 'disponible', '13'),
+(8, 'spaghetti', 'spaghetti con carne', 'disponible', '20'),
+(9, 'guacamole', 'rico guacamole', 'no disponible', '15');
 
 create table alumno(
     id_becado int AUTO_INCREMENT PRIMARY KEY,
@@ -63,7 +75,6 @@ create table CorreoA(
     id_becado int,
     correo varchar(50),
     FOREIGN KEY (id_becado) REFERENCES alumno(id_becado)
-
 );
 
 create table TelefonoC(
@@ -83,7 +94,6 @@ create table TelefonoE
     id_AdministradorEsc int,
     telefono varchar(50),
     FOREIGN KEY (id_AdministradorEsc) REFERENCES AdminEscuela(id_AdministradorEsc)
-
 );
 create table imagen(
     id_imagen varchar(50),

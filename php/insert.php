@@ -20,5 +20,12 @@ $result1 = mysqli_query($conn, $sql);
 $sql = "INSERT INTO CorreoA(id_becado, correo) VALUES((SELECT id_becado FROM alumno WHERE no_control = $no_cont AND contrasena = '$contra'), '$correo');";
 mysqli_query($conn, $sql);
 
-echo "Alumno Ingresado";
+echo "Alumno Ingresado<br />Redireccionando...";
 ?>
+<!-- Funcion para regresar a la pagina anterior. -->
+<script>
+setTimeout(function () {
+    window.location.href='/BecaLunchITT/p_alumno.html';
+}, 2500);
+</script>
+
