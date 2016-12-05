@@ -14,7 +14,7 @@
             <div class="row-bot">
                 <div class="row-bot-bg">
                     <div class="main">
-                        <h2>Per<span>fil</span></h2>
+                        <h2>Menu<span> Alumnos</span></h2>
                     </div>
                 </div>
             </div>
@@ -27,6 +27,50 @@
                 <div class="wrapper">
                     <article class="column-1">
                         <div class="indent-left">
+                            <h3>Alta de alumno</h3>
+                            <form class="container" action="/BecaLunchITT/php/insert.php" method="POST">
+                                <label for="correo">Correo:</label>
+                                <input id="correo" type="email" name="correo"><br />
+                                <label for="no_control">Numero de Control: </label>
+                                <input id="no_control" type="text" name="no_control"><br />
+                                <label for="nombre">Nombres:</label>
+                                <input id="nombre" type="text" name="nombre"><br />
+                                <label for="apellidop">Apellido Paterno: </label>
+                                <input id="apellidop" type="text" name="apellidop"><br />
+                                <label for="apellidom">Apellido Materno: </label>
+                                <input id="apellidom" type="text" name="apellidom"><br />
+                                <label for="semestre">Semestre:</label>
+                                <input id="semestre" type="number" name="semestre" min="1" max="14"><br />
+                                <!--Contador: veces que el alumno a tenido beca-->
+                                <!-- Status: -->
+                                <!---<select>
+                                    <option value="Activo" name="status" >Activo</option>
+                                    <option value="Inactivo" name="status">Inactivo</option>
+                                    </select>-->
+                                    <label for="periodo">Periodo: </label>
+                                    <input type="text" name="periodo" id="periodo"><br />
+                                    <!--<select name="periodo[]">
+                                        <option class="op" value="EJ" >Enero-Junio</option>
+                                        <option class="op" value="AD" >Agosto-Diciembre</option>
+                                        </select>-->
+                                        <label for="contrasena">Contraseña: </label>
+                                        <input type="password" name="contrasena" id="contrasena"><br />
+                                        <!--
+                                            <label for="contador">contador </label>
+                                            <input type="text" name="contador" value="1"  id="contador" disabled><br />
+                                        -->
+                                        <!--Sumbit y reset-->
+                                        <br />
+                                        <input type="submit" value="Dar de alta">
+                                        <input type="reset" value="Limpiar formulario">
+                            </form>
+                            <br /><br />
+                            <h3>Baja de alumno</h3>
+                            <form class="container" action="/BecaLunchITT/php/elim.php" method="POST">
+                                <label for="no_control">Numero de Control: </label>
+                                <input id="no_control" type="text" name="no_control"><br />
+                                <input type="submit" class="btn btn-success" value="Eliminar alumno">
+                            </form>
                         </div>
                     </article>
                 </div>

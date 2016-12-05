@@ -33,8 +33,8 @@ $(document).ready(function() {
                         type: "POST",
                         url: "php/SetSessionIdUsuario.php",
                         data: {
-                            Correo: "NULL"
-                            , Contrasena: "NULL"
+                            Correo: ""
+                            , Contrasena: ""
                         }, success: function(data) {
                             window.location.reload();
                         }

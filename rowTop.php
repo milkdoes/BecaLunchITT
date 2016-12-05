@@ -23,7 +23,9 @@ if( isset($_SESSION["IdUsuario"]) && !empty($_SESSION["IdUsuario"]) ) {
                 <ul class="menu">
                     <li><a href="index.html">Acerca de</a></li>
                     <li><a href="menu.html">Menu</a></li>
-                    <li><a href="p_admin.html">Perfil</a></li>
+                    <!--
+                        <li><a href="p_admin.html">Perfil</a></li>
+                    -->
                     <li><a href="p_alumno.html">Alumnos</a></li>
                     <li><a href="catalogue.html">Catalogo </a></li>
                     <li><a href="faq.html">Preguntas frecuentes </a></li>
