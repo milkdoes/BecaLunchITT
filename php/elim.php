@@ -1,20 +1,24 @@
 <?php
 
-include_once 'Conn.php';
+include 'Conn.php';
 
 $num = $_POST["no_control"];
 // $nom = $_POST["Nombre"];
 //$ape = $_POST["Apellido_P"];
 //$apem = $_POST["Apellido_M"] ;
+echo $num;
 ?>
 
-</tr>
 <?php
-$sql = "DELETE FROM alumno  where no_control = '$num';" ;
+$sql = "DELETE FROM alumno WHERE no_control = " . $num . ";";
 //$sql1="select * from cliente";
 //$result1 = mysqli_query($conn, $sql);
-$result = mysqli_query($conn, $sql);
-echo "Alumno Eliminado<br />Redireccionando...";
+
+if (mysqli_query($conn, $sql)) {
+    echo "Alumno Eliminado<br />Redireccionando...";
+} else {
+    echo "Falla de eliminacion" . mysqli_error($conn);
+}
 ?>
 <!-- Funcion para regresar a la pagina anterior. -->
 <script>
